@@ -1,0 +1,20 @@
+server:
+  port: 8000
+  error:
+    include-message: always
+    include-binding-errors: always
+spring:
+  main:
+    web-application-type: servlet
+  datasource:
+    url: jdbc:oracle:thin:@ojb.cxxm6ceoglee.eu-north-1.rds.amazonaws.com:1521:orcl
+    username: admin
+    password: secretojb
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        format_sql: true
+    show-sql: true
